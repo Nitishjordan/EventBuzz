@@ -1,0 +1,213 @@
+<html>
+	<head>{% load staticfiles %}
+	<style>
+		body
+		{
+		opacity:1;
+		}
+		#header
+		{
+			height:100px;
+			width:1340px;
+			
+		}
+		
+		#header img
+		{
+			border-radius:20px;
+			
+		}
+		.navclass
+		{
+		background-color:black;
+			color:white;
+			font-size:20px;
+			font-family:sans-serif;
+			
+		}
+		
+		
+		.navclass ul li
+		{
+			list-style-type:none;
+			display:inline-block;
+			padding-top:5px;
+			padding-bottom:5px;
+			padding-left:25px;
+			padding-right:25px;
+			position:relative;
+		}
+		.navclass ul li:hover
+		{
+			 background-color:red;
+		}
+		
+		ul .submenu
+		{ position:absolute;
+		top:40px;
+		left:0px;
+		right:40px;
+		 background-color:black;
+		 width:110px;
+		 text-align:center;
+		 padding-left:5px;
+		 padding-top:10px;
+		 margin-left:0px;
+		 padding-top:10px;
+		 opacity:0;
+		 
+		}
+		
+		
+		ul .submenu li{
+			padding-left:5px;
+			padding-top:5px;
+			padding-bottom:10px;
+			font-size:20px;
+			
+		}
+		.navclass  ul li:hover .submenu
+		{ 
+		opacity:1;
+		transition:2s;
+		
+		}
+		
+		.navclass ul li a
+		{ 
+			list-tyle-type:none;
+			color:white;
+			text-decoration:scrollbar;
+
+					
+		}
+		#b h1
+		{
+			background-color:black;
+			position:absolute;
+			top:25%;
+			left:36%;
+			color:red;
+			border-radius:10px;
+			font-family:Viner Hand ITC;
+			font-size:30px;
+		}
+		.events
+		{
+			color:lightseagreen;
+		}
+		.events table 
+		{
+			color:white;
+			font-size:15px;
+			font-family: Engravers MT;
+			font-style:bold;
+		}
+		.w3-animate-zoom {animation:animatezoom 4s
+		}
+		@keyframes animatezoom{from{transform:scale(0)} to{transform:scale(1)}}
+		.f1
+		{
+			width:100%
+			height:500px;
+			background-color:black;
+			border-radius:20px;
+			
+			opacity:0.8;
+			transition:5s;
+			text-align:center;
+			color:white;
+			box-shadow: 4px 4px 8px 8px rgba(0, 0, 0, 0.4);
+		}
+	</style>
+	<link rel="stylesheet" href="{% static 'w3.css' %}">
+	</head>
+<body background="{% static '13.jpg'%}">
+	<div id="header">
+				<marquee direction="left" behaviour="alternate" scrollamount="4">
+		<font size="20" face="Viner Hand ITC" color="red" style="bold">
+				Event Management
+			</font>
+	
+	</marquee>
+	</div>
+	
+	<nav class="navclass">
+		<ul>
+			<li><a href="/">Home</a></li>
+			<li>Event
+				<ul class="submenu">
+					<li><a href="/login/">Register<a></li><br>
+					<li> <a href="/show/">Show</a></li>
+				</ul>
+			</li>
+			<li><a href="/about/">About us</a></li>
+			<li><a href="/contact/">Contacts</a></li>
+		</ul>
+	</nav>
+	<div id="b">
+		<h1 class="w3-animate-opacity"> EVENT REGISTERED</h1>  
+		<br>
+			 <br>
+			 <br>
+			 <br>
+			 <br>
+			{% for events in form %}
+			<div class="w3-animate-zoom">
+			<div class="events">
+				
+				<table>
+					<tr>
+						<td>Manager Name:-
+						{{events.Manager_Name}}
+						</td>
+					</tr>
+					<tr>
+						<td>Event title:-
+						{{events.Event_title}}
+						</td>
+					</tr>
+					<tr>
+						<td>Event Venue:-
+						{{events.Event_venue}}
+						</td>
+					</tr>
+					<tr>
+						<td>
+						Event Details:-
+						{{events.Event_Details}}
+						</td>
+					</tr>
+					<tr>
+						<td>Event Date:-
+						{{events.Event_date}}
+						</td>
+					</tr>
+					<tr>
+						<td>Email:-
+						{{events.Email}}
+						</td>
+					</tr>
+					<tr>
+						<td>Contact:-
+						{{events.Contact}}
+						</td>
+					</tr>
+				
+				</table>
+				
+					<hr>
+				</div>
+			</div>
+		{% endfor %}	
+		
+	</div> <br><br><br><br> 
+	<div class="f1">
+		   Made By:Nitish Kumar Srivastava &amp; Shivangi Pandey
+		   
+			</div>
+         
+
+</body>
+
+</html>

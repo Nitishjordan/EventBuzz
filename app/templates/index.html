@@ -1,0 +1,197 @@
+<html>
+	<head>{% load staticfiles %}
+	<style>
+		
+		#header
+		{
+			height:100px;
+			width:1330px;
+			
+		}
+		
+		#header img
+		{
+			border-radius:20px;
+			
+		}
+		.navclass
+		{ 	
+			width:100%;
+			background-color:black;
+			color:white;
+			font-size:20px;
+			font-family:sans-serif;
+		}
+		
+		
+		.navclass ul li
+		{
+			list-style-type:none;
+			display:inline-block;
+			padding-top:5px;
+			padding-bottom:5px;
+			padding-left:25px;
+			padding-right:25px;
+			position:relative;
+		}
+		.navclass ul li:hover
+		{
+			 background-color:lightseagreen;
+		}
+		
+		ul .submenu
+		{ position:absolute;
+		top:40px;
+		left:0px;
+		right:40px;
+		 background-color:black;
+		 width:110px;
+		 height:110px;
+		 padding-left:5px;
+		 padding-top:10px;
+		 margin-left:0px;
+		 padding-top:10px;
+		 opacity:0;
+		 
+		 
+		}
+		
+		
+		ul .submenu li{
+			padding-left:5px;
+			padding-top:5px;
+			padding-bottom:10px;
+			font-size:20px;
+			
+		}
+		.navclass  ul li:hover .submenu
+		{ 
+		opacity:1;
+		transition:0.4s;
+		
+		}
+		
+		.navclass ul li a
+		{ 
+			list-style-type:none;
+			color:white;
+			text-decoration:scrollbar;
+
+					
+		}
+
+		.w3-animate-opacity img
+		{  width:1330px;
+			border-radius:20px;
+			float:left;
+			height:400px;
+			
+		}
+		
+		#right
+		{
+			float:right;
+			height:300px;
+			width:250px;
+			position:absolute;
+			top:200px;
+			right:250px;
+		}
+		#right h1
+		{
+			font-size:30px;
+			font-family:Viner Hand ITC;
+			11color:red;
+			text-align:center;
+			animation:opac 8s;
+		}
+		@keyframes opac
+		{from   {opacity:0} 
+		to    {opacity:1}
+		}
+		#right h2
+		{
+		font-family:Monotype Corsiva;
+		animation:animatetop 10s;
+		font-size:30px;
+		color:white;
+		
+		
+		}
+		@keyframes animatetop
+		{from{top:-300px;opacity:0} 
+		to{top:0;opacity:1}
+		}
+		.footer
+		{
+			width:1330px;
+			height:400px;
+			background-color:black;
+			border-radius:20px;
+			margin-left:10px;
+		}
+		.f1
+		{
+			width:100%
+			height:500px;
+			background-color:black;
+			border-radius:20px;
+			
+			opacity:0.8;
+			transition:5s;
+			text-align:center;
+			color:white;
+			box-shadow: 4px 4px 8px 8px rgba(0, 0, 0, 0.4);
+		}
+	</style>
+
+<link rel="stylesheet" href="{% static 'w3.css'  %}">
+
+	</head>
+<body background="{% static '13.jpg' %}">
+	<div id="header">
+		<marquee direction="left" behaviour="alternate" scrollamount="4">
+		<font size="20" face="Viner Hand ITC" color="red" style="bold">
+				Event Management
+			</font>
+	</marquee>
+	</div>
+	
+	<nav class="navclass">
+		<ul>
+			<li><a href="/">Home</a></li>
+			<li>Event
+				<ul class="submenu">
+					<li><a href="/login/">Register<a></li><br>
+					<li> <a href="/show/">Show</a></li>
+				</ul>
+			</li>
+			<li><a href="/about/">About us</a></li>
+			<li><a href="/contact/">Contacts</a></li>
+		</ul>
+	</nav>
+	<div class="footer">
+		<div class="w3-animate-opacity" >
+			<img src="{% static '4.jpg' %}">
+		</div> 
+		<div id="right">
+			<h1>Event Register</h1>
+			<h2>
+				Here you got a wonderful opportunity <br>
+				to get your event published on our website <br>
+				
+			</h2>
+		</div>
+		</div><br><br><br>
+		<div class="w3-animate-left">
+			<img src="{% static 'pixels.jpg' %}">
+	
+		</div>
+		
+		<div class="f1">
+		   Made By:Nitish Kumar Srivastava &amp; Shivangi Pandey
+		   
+			</div>
+	
+	</body>
+</html>

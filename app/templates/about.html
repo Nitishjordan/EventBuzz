@@ -1,0 +1,159 @@
+<html>
+	<head>{% load staticfiles %}
+	<style>
+		
+		#header
+		{
+			height:100px;
+			width:1340px;
+			
+		}
+		
+		#header img
+		{
+			border-radius:20px;
+			
+		}
+		.navclass
+		{
+		background-color:black;
+			color:white;
+			font-size:20px;
+			font-family:sans-serif;
+			
+		}
+		
+		
+		.navclass ul li
+		{
+			list-style-type:none;
+			display:inline-block;
+			padding-top:5px;
+			padding-bottom:5px;
+			padding-left:25px;
+			padding-right:25px;
+			position:relative;
+		}
+		.navclass ul li:hover
+		{
+			 background-color:red;
+		}
+		
+		ul .submenu
+		{ position:absolute;
+		top:33px;
+		left:0px;
+		right:40px;
+		 background-color:black;
+		 width:115px;
+		 text-align:center;
+		 padding-left:5px;
+		 padding-top:10px;
+		 margin-left:0px;
+		 padding-top:10px;
+		 opacity:0;
+		 
+		}
+		
+		
+		ul .submenu li{
+			padding-left:5px;
+			padding-top:5px;
+			padding-bottom:10px;
+			font-size:20px;
+			
+		}
+		.navclass  ul li:hover .submenu
+		{ 
+		opacity:1;
+		transition:2s;
+		
+		}
+		
+		.navclass ul li a
+		{ 
+			list-tyle-type:none;
+			color:white;
+			text-decoration:scrollbar;
+
+					
+		}
+	 .w3-animate
+	 {
+	 font-size:25px;
+	 color:white;
+	 }
+	 .w3-center w3-animate-bottom
+	 {
+	  top:20%;
+	  left:100px;
+	 }
+	 .f1
+		{
+			width:100%
+			height:500px;
+			background-color:black;
+			border-radius:20px;
+			
+			opacity:0.8;
+			transition:5s;
+			text-align:center;
+			color:white;
+			box-shadow: 4px 4px 8px 8px rgba(0, 0, 0, 0.4);
+		}
+	 
+		</style>
+		<link rel="stylesheet" href="{% static 'w3.css' %}">
+		</head>
+<body background="{% static 'bg1.jpg'%}">
+	<div id="header">
+				<marquee direction="left" behaviour="alternate" scrollamount="4">
+		<font size="20" face="Viner Hand ITC" color="red" style="bold">
+				Event Management
+			</font>
+	
+	</marquee>
+	</div>
+	
+	<nav class="navclass">
+		<ul>
+			<li><a href="/">Home</a></li>
+			<li>Event
+				<ul class="submenu">
+					<li><a href="/login/">Register<a></li><br>
+					<li> <a href="/show/">Show</a></li>
+				</ul>
+			</li>
+			<li><a href="/about/">About us</a></li>
+			<li><a href="/contact/">Contacts</a></li>
+		</ul>
+	</nav>
+	
+	<br>
+	<br><br><br>
+	
+		<h1  class="w3-center w3-animate-bottom">  ABOUT US </h1>
+
+	<div class="w3-animate">
+		<div class="w3-center w3-animate-right">
+		
+		<p>Event Buzz is a award winning provider of Event registration,Event Websites and staffing.<br>
+		It makesthe professional of events organisers and Event manager better.<br></p>
+		<p>
+			To acheive this ,we fully embrace the continuing opportunity with a level of customer service that exceed the expectations<br>
+				individuals with the right attitude and passion deliver results .
+				</p>
+		<p>
+			To add value in the global event sector ,our innovations lab comprise focused individuals who are skilled in global thoughts.<br>
+				So with this get in touch with us and experience the enthusiasm of the Events........
+				</p>
+		</p>
+		</div>
+	</div>
+	<br><br><br><br>
+	<div class="f1">
+		   Made By:Nitish Kumar Srivastava &amp; Shivangi Pandey
+		   
+			</div>
+</body>
+</html>

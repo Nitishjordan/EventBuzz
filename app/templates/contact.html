@@ -1,0 +1,243 @@
+<html>
+	<head>{% load staticfiles %}
+	<style>
+		
+		#header
+		{
+			height:100px;
+			width:1340px;
+			
+		}
+		
+		#header img
+		{
+			border-radius:20px;
+			
+		}
+		.navclass
+		{
+		background-color:black;
+			color:white;
+			font-size:20px;
+			font-family:sans-serif;
+			
+		}
+		
+		
+		.navclass ul li
+		{
+			list-style-type:none;
+			display:inline-block;
+			padding-top:5px;
+			padding-bottom:5px;
+			padding-left:25px;
+			padding-right:25px;
+			position:relative;
+		}
+		.navclass ul li:hover
+		{
+			 background-color:red;
+		}
+		
+		ul .submenu
+		{ position:absolute;
+		top:40px;
+		left:0px;
+		right:40px;
+		 background-color:black;
+		 width:115px;
+		 height:110px;
+		 text-align:center;
+		 padding-left:5px;
+		 padding-top:10px;
+		 margin-left:0px;
+		 padding-top:10px;
+		 opacity:0;
+		 
+		}
+		
+		
+		ul .submenu li{
+			padding-left:5px;
+			padding-top:5px;
+			padding-bottom:10px;
+			font-size:20px;
+			
+		}
+		.navclass  ul li:hover .submenu
+		{ 
+		opacity:1;
+		transition:2s;
+		
+		}
+		
+		.navclass ul li a
+		{ 
+			list-tyle-type:none;
+			color:white;
+			text-decoration:scrollbar;
+
+					
+		}
+		.column {
+    float: left;
+    width: 33.3%;
+    margin-bottom: 16px;
+    padding: 0 8px;
+}
+
+@media screen and (max-width:750px) {
+    .column {
+        width: 100%;
+        display: block;
+		
+    }
+}
+
+/* Add some shadows to create a card effect */
+.card {
+    box-shadow: 4px 4px 8px 8px rgba(0, 0, 0, 0.4);
+	
+}
+.card img
+{
+	border-radius:50%;
+	height:200px;
+	width:200px;
+	margin-left:23%;
+	margin-top:5px;
+}
+
+.container {
+    padding: 0 20px;
+}
+
+/* Clear floats */
+.container::after, .row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.title {
+    color: grey;
+}
+
+.button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+	text-decoration:scrollbar;
+}
+
+.button:hover {
+    background-color: #555;
+}
+.container p
+{
+	font-size:20px;
+	color:white;
+	text-align:center;
+	font-family:Times New Roman;
+}
+.container h2
+{
+
+font-size:25px;
+color:lightblue;
+text-align:center;
+font-family:Monotype Corsiva;
+}
+.row
+{
+padding-left:350px;
+
+}
+.w3-center w3-animate-bottom
+{
+	color:yellow;
+}
+.f1
+		{
+			width:100%
+			height:500px;
+			background-color:black;
+			border-radius:20px;
+			
+			opacity:0.8;
+			transition:5s;
+			text-align:center;
+			color:white;
+			box-shadow: 4px 4px 8px 8px rgba(0, 0, 0, 0.4);
+		}
+</style>
+<link rel="stylesheet" href="{% static 'w3.css' %}">
+</head>
+<body background="{% static '13.jpg'%}">
+	<div id="header">
+				<marquee direction="left" behaviour="alternate" scrollamount="4">
+		<font size="20" face="Viner Hand ITC" color="red" style="bold">
+				Event Management
+			</font>
+	
+	</marquee>
+	</div>
+	
+	<nav class="navclass">
+		<ul>
+			<li><a href="/">Home</a></li>
+			<li>Event
+				<ul class="submenu">
+					<li><a href="/login/">Register<a></li><br>
+					<li> <a href="/show/">Shows</a></li>
+				</ul>
+			</li>
+			<li><a href="/about/">About us</a></li>
+			<li><a href="/contact/">Contacts</a></li>
+		</ul>
+	</nav><br>
+		<br>
+		<h1  class="w3-center w3-animate-bottom">  Contact Us </h1><br><br>
+
+<div class="w3 animate w3-animate-bottom">
+	<div class="row">
+		<div class="column">
+			<div class="card">
+				<img src="{% static 'nitish.jpg'%}" alt="Jane" >
+			<div class="container">
+				<h2>Nitish Kumar Srivastava</h2>
+				<p class="title">CEO &amp; Founder</p>
+				<p>Designer and Developer.</p>
+				<p>srivastavanitish74@gmail.com</p>
+				<p><a class="button" href="https://www.facebook.com/nitish.srivastava.94009">Contact</a></p>
+			</div>
+		</div>
+	</div>
+
+		<div class="column">
+			<div class="card">
+				<img src="{% static 'shivangi.jpg'%}" alt="Jane" >
+			<div class="container">
+				<h2>Shivangi Pandey</h2>
+				<p class="title">Co-Founder</p>
+				<p>Content writer</p>
+				<p>shivangipandey2509@gmail.com</p>
+				<p><a class="button" href="https://www.facebook.com/shivangi.pandey.338658">Contact</a></p>
+			</div>
+		</div>
+	</div>
+</div>
+</div>	<br><br><br>
+
+<div class="f1">
+		   Made By:Nitish Kumar Srivastava &amp; Shivangi Pandey
+		   
+			</div>
+</body>
+</html>
